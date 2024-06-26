@@ -24,12 +24,13 @@ RUN apt-get update && \
     libglib2.0-0 \
     libzbar0 \
     libzbar-dev \
+    poppler-utils \ 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 

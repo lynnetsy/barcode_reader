@@ -1,10 +1,11 @@
-from src.barcodereader import process_pdf_for_barcodes
+import os
+from src.barcode_v3 import process_pdfs
 
-def read_pdf():
-    # examples/
-    pdf_path = "/app/examples/comp_dom_rotated_90.pdf"
-    pdf_data = process_pdf_for_barcodes(pdf_path)
-    print("::: barcodes result", pdf_data)
+
+def main(input_path):
+    process_pdfs(input_path)
+
 
 if __name__ == "__main__":
-    read_pdf()
+    input_path = "/app/examples"
+    main(input_path)

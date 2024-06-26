@@ -1,0 +1,6 @@
+services:
+  barcodereader:
+    container_name: barcodereader
+    build: .
+    volumes:
+      - .:/app

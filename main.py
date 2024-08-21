@@ -1,9 +1,8 @@
-import os
-from src.barcode_v3 import process_pdfs
+from src.barcode_v3 import process_files
 
 
 def main(input_path):
-    process_pdfs(input_path)
+    process_files(input_path)
 
 
 if __name__ == "__main__":
